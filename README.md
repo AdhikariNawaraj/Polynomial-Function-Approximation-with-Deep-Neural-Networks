@@ -42,6 +42,34 @@ Black dots: observed noisy samples.
 
 <img width="636" height="760" alt="image" src="https://github.com/user-attachments/assets/ded8d25d-b3c8-4b29-a46b-67721b30ce89" />
 
+<img width="626" height="764" alt="image" src="https://github.com/user-attachments/assets/36047b6f-5ebd-45e9-b563-4362e8766e3e" />
+
+<img width="866" height="766" alt="image" src="https://github.com/user-attachments/assets/8723392b-7ea3-4ff9-aa4a-4227502fa562" />
+
+Findings:
+The DNN curve remained relatively flat.
+Failed to capture steep curvature, especially at extremes (x = -2, 2)
+Severe underfitting due to small hidden size.
+
+📈 Evaluation:
+At x = -2: true = 10.2, predicted = 3.08 → ~ -7.12
+At x = 2: true = 3.40, predicted = 2.14 → ~ -1.26
+Mean error: ~ -0.99 (Downward bias)
+RMSE: ~ 2.6 (Eveidence of underfitting)
+
+✅ Conclusion:
+The two-layer, three-neuron DNN underfits the polynomial.
+It produces nearly flat predictions and misses curvature at the extremes.
+
+Possible improvements:
+Add more neurons per layer (10–20).
+Introduce additional hidden layers.
+Increase training epochs.
+
+
+
+
+
 
 
 
